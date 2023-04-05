@@ -1,0 +1,5 @@
+[
+	{"id":1, "strategy": "Coral make calcified fronds with flexible joints in the ocean.", "organism": "Coral", "partof": "fronds","function":"to be flexible", "mechanism": "calcified fronds", "context":"ocean" },
+    {"id":2, "strategy": "Algae resist tiredness in ocean waves by having a joint structure that lacks diagonal connections.", "organism": "Algae", "partof": "joint","function":"resist tiredness", "mechanism": "joint structure", "context":" ocean waves" },
+    {"id":3, "strategy": "Animals rely on hydrostatic skeletons for support and movement by distributing internal pressure.", "organism": "Animals", "partof": "hydrostatic skeletons","function":"support and movement", "mechanism": "internal pressure", "context":"animals and animal structures" }
+]

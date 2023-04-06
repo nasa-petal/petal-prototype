@@ -20,9 +20,9 @@ function App() {
 
   return (
     <div className='App' style={{ minHeight: "100vh" }}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path='/{app-name}' element={<Navbar />} />
+          <Route path='/' element={<Navbar />} />
           <Route path='biomimicrysearch' element={<BiomimicrySearch />} />
           <Route path='texttoimage' element={<TextToImage />} />
           <Route path='clustering' element={<Clustering />} />

@@ -175,25 +175,25 @@ const TextToImage = () => {
 
   const slides = [
     {
-      url: "./petal-prototype/images/trunk.jpg",
+      url: "./images/trunk.jpg",
       title: "Trunk",
       prompt: "Create a flexible robot based on an elephant's trunk.",
     },
     {
-      url: "/images/bird.jpeg",
+      url: "./images/bird.jpeg",
       title: "Bird",
       prompt:
         "Peregrine falcon's have a maximum diving speed of 240 mph. Develop a plane based off its body to have the same characteristic.",
     },
     {
-      url: "/images/biomimicry_ex2.jpeg",
+      url: "./images/biomimicry_ex2.jpeg",
       title: "Wing",
       prompt:
         "Could an aircraft's wings be designed on an organism's wings or fins?",
     },
 
     {
-      url: "/images/biomimicry_ex1.jpeg",
+      url: "./images/biomimicry_ex1.jpeg",
       title: "Kingfisher",
       prompt:
         "Design a plan to build an aerodynamic train based off a kingfisher's beak. It should have the style of a mechanical engineering diagram with a blue background.",

@@ -22,7 +22,7 @@ function App() {
     <div className='App' style={{ minHeight: "100vh" }}>
       <Router>
         <Routes>
-          <Route path='/' element={<Navbar />} />
+          <Route path='/{app-name}' element={<Navbar />} />
           <Route path='biomimicrysearch' element={<BiomimicrySearch />} />
           <Route path='texttoimage' element={<TextToImage />} />
           <Route path='clustering' element={<Clustering />} />

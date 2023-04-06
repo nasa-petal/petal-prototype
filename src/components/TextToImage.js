@@ -175,7 +175,7 @@ const TextToImage = () => {
 
   const slides = [
     {
-      url: "/images/trunk.jpg",
+      url: "./petal-prototype/images/trunk.jpg",
       title: "Trunk",
       prompt: "Create a flexible robot based on an elephant's trunk.",
     },

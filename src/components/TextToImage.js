@@ -175,12 +175,12 @@ const TextToImage = () => {
 
   const slides = [
     {
-      url: "http://nasa-petal.github.io/petal-prototype/images/petal-prototype/images/trunk.jpg",
+      url: "http://nasa-petal.github.io/petal-prototype/images/trunk.jpg",
       title: "Trunk",
       prompt: "Create a flexible robot based on an elephant's trunk.",
     },
     {
-      url: "http://nasa-petal.github.io/petal-prototype/images//petal-prototype/bird.jpeg",
+      url: "http://nasa-petal.github.io/petal-prototype/images/bird.jpeg",
       title: "Bird",
       prompt:
         "Peregrine falcon's have a maximum diving speed of 240 mph. Develop a plane based off its body to have the same characteristic.",

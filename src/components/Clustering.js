@@ -618,7 +618,7 @@ function Clustering() {
             className='intertopicDistFig'
             width={500}
             height={250}
-            src='./images/Ex_intertopic_Dist.png'
+            src='https://nasa-petal.github.io/petal-prototype/images/Ex_intertopic_Dist.png'
             alt=''
             onClick={() => showInterTopicDiv()}
           />
@@ -729,7 +729,7 @@ function Clustering() {
       </div>
       {imageDist && (
         <div>
-          <img src='/images/Ex_topic_freq.png' alt='' />
+          <img src='https://nasa-petal.github.io/petal-prototype/Ex_topic_freq.png' alt='' />
           <div style={{ marginBottom: "20px", marginTop: "20px" }}>
             <Button
               variant='outlined'

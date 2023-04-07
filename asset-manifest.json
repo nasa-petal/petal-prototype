@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/petal-prototype/static/css/main.3838e134.css",
-    "main.js": "/petal-prototype/static/js/main.b41e5402.js",
+    "main.js": "/petal-prototype/static/js/main.b86d6c67.js",
     "static/media/petal2.png": "/petal-prototype/static/media/petal2.5d925aaab36dbf262040.png",
     "index.html": "/petal-prototype/index.html",
     "main.3838e134.css.map": "/petal-prototype/static/css/main.3838e134.css.map",
-    "main.b41e5402.js.map": "/petal-prototype/static/js/main.b41e5402.js.map"
+    "main.b86d6c67.js.map": "/petal-prototype/static/js/main.b86d6c67.js.map"
   },
   "entrypoints": [
     "static/css/main.3838e134.css",
-    "static/js/main.b41e5402.js"
+    "static/js/main.b86d6c67.js"
   ]
 }

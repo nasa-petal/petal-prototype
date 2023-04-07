@@ -618,7 +618,7 @@ function Clustering() {
             className='intertopicDistFig'
             width={500}
             height={250}
-            src='/images/Ex_intertopic_Dist.png'
+            src='./images/Ex_intertopic_Dist.png'
             alt=''
             onClick={() => showInterTopicDiv()}
           />

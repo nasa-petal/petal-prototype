@@ -729,7 +729,7 @@ function Clustering() {
       </div>
       {imageDist && (
         <div>
-          <img src='https://nasa-petal.github.io/petal-prototype/Ex_topic_freq.png' alt='' />
+          <img src='https://nasa-petal.github.io/petal-prototype/images/Ex_topic_freq.png' alt='' />
           <div style={{ marginBottom: "20px", marginTop: "20px" }}>
             <Button
               variant='outlined'

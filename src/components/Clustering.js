@@ -228,7 +228,7 @@ function Row(props) {
 };*/
 
 const rowsInit = [
-  createData(1, 75, "bacteria_membrane_membranes_cell", [
+  createData(1, 75, "bacteria_membranes_cell", [
     {
       id: 0,
       Function: "couple or crosslink proteins",
@@ -242,7 +242,7 @@ const rowsInit = [
         "Bacterial cells produce polyester granuals in water at ambient temperature and pressure via enzymatic self-assembly.",
     },
   ]),
-  createData(2, 67, "enzymes_bacteria_metabolism_carbon", [
+  createData(2, 67, "enzymes_metabolism_carbon", [
     {
       id: 0,
       Function: "resists microorganism",
@@ -270,7 +270,7 @@ const rowsInit = [
         "Volatile compounds found in oregano destroy fungi by breaking down their cell membranes.",
     },
   ]),
-  createData(4, 61, "legs_hind_feet_locust", [
+  createData(4, 61, "legs_hind_feet", [
     {
       id: 0,
       Function: "resists microorganism",
@@ -329,7 +329,7 @@ const rowsInit = [
 ];
 
 const rowsReduceDrag = [
-  createData(1, 20, "structural_change_width", [
+  createData(1, 20, "structure_change_width", [
     {
       id: 0,
       Function: "changes in width and flatness",
@@ -349,7 +349,7 @@ const rowsReduceDrag = [
         "The forelegs of the whirligig beetle reduce loss of speed by folding during swimming to enhance a fluid-resistant body shape.",
     },
   ]),
-  createData(2, 35, "structure_water", [
+  createData(2, 35, "structure_water_manipulation", [
     {
       id: 0,
       Function: "whiskers with undulating surface structure",
@@ -729,7 +729,10 @@ function Clustering() {
       </div>
       {imageDist && (
         <div>
-          <img src='http://nasa-petal.github.io/petal-prototype/images/Ex_topic_freq.png' alt='' />
+          <img
+            src='http://nasa-petal.github.io/petal-prototype/images/Ex_topic_freq.png'
+            alt=''
+          />
           <div style={{ marginBottom: "20px", marginTop: "20px" }}>
             <Button
               variant='outlined'

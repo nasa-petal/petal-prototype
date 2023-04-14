@@ -161,6 +161,7 @@ function Reframe() {
   const clearDesignData = () => {
     setInputText("");
     setData([]);
+    setSelectOption("Level 1");
   };
 
   const setDesignData = () => {

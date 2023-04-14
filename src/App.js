@@ -20,7 +20,8 @@ function App() {
 
   return (
     <div className='App' style={{ minHeight: "100vh" }}>
-      <Router basename={process.env.PUBLIC_URL}>
+      {/*{process.env.PUBLIC_URL} basename='/#'*/}
+      <Router>
         <Routes>
           <Route path='/' element={<Navbar />} />
           <Route path='biomimicrysearch' element={<BiomimicrySearch />} />

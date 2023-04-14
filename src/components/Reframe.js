@@ -117,6 +117,7 @@ const flyingCarDataFinerData = [
 ];
 
 const antifogSpaceInp = "How would you antifog a space helmet?";
+
 const spaceData = [
   "How would you keep clear visibility for the astronaut wearing the helmet?",
   "How would you minimize water intrusion?",
@@ -194,11 +195,11 @@ function Reframe() {
     if (value === "Level 1" && inputText === flyingCarInp) {
       data = flyingCarData;
     } else if (value === "Level 2" && inputText === flyingCarInp) {
-      data = spaceFinerData;
+      data = flyingCarDataFinerData;
     } else if (value === "Level 1" && inputText === antifogSpaceInp) {
       data = spaceData;
     } else if (value === "Level 2" && inputText === antifogSpaceInp) {
-      data = flyingCarDataFinerData;
+      data = spaceFinerData;
     }
 
     setData(

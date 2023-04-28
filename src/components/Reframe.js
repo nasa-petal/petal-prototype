@@ -19,6 +19,7 @@ import Select from "@mui/material/Select";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import { useTheme } from "@mui/material/styles";
+import { ToastContainer } from "react-bootstrap";
 
 const WhiteTextTypography = withStyles({
   root: {
@@ -41,6 +42,16 @@ const help = (
     Once you have submitted the design challenge, the search results returned
     can have variety of complexities. Level 1 results look at the bigger picture
     and Level 2 results are more fine-grained.
+    <br />
+    <br />
+    Examples of Biologize Questions:
+    <br />
+    - "How might we reduce stormwater runoff and flooding in cities?"
+    <br />- "How might we keep buildings cool in the summer?"
+    <br />- "How might we reduce the use of toxic substances in paints?"
+    <br />
+    <br />
+    Note biolgized outputs only have one level of complexity.
   </DialogContentText>
 );
 
@@ -129,6 +140,31 @@ const spaceFinerData = [
   "How can you minimize moisture in the air inside the helmet?",
 ];
 
+const biologizeFloodingInp =
+  "How might we reduce stormwater runoff and flooding in cities?";
+
+const biologizeFloodingData = [
+  "How does nature absorb water in urban areas?",
+  "How does nature filter pollutants in high intensity rainfall?",
+  "How does nature sense and send signals in impervious surfaces?",
+];
+const biologizeBuildingsInp = "How might we keep buildings cool in the summer?";
+
+const biologizeBuildingsData = [
+  "How does nature regulate temperature and balance heat in a chaotic, busy environment moving quickly?",
+  "How does nature regulate temperature and balance heat in hot environments?",
+  "How does nature limit the absorbed solar energy to the useful fraction of radiation?",
+  "How does nature efficiently emit thermal energy?",
+];
+
+const biologizeToxicInp =
+  "How might we reduce the use of toxic substances in paints?";
+
+const biologizeToxicData = [
+  "How do plants and animals sense and respond to toxic substances in their environment?",
+  "How does nature reduce the risk of predation and disease using chemical signals?",
+];
+
 const selectOptions = ["Level 1", "Level 2"];
 
 function getStyles(option, selectOption, theme) {
@@ -145,6 +181,7 @@ function Reframe() {
   const [inputText, setInputText] = useState("");
   const [openEmptytext, setOpenEmptyText] = React.useState(false);
   const [selectOption, setSelectOption] = React.useState("Level 1");
+  const [biologize, setBiologize] = React.useState(false);
   const theme = useTheme();
 
   const SELECT_ITEM_HEIGHT = 48;
@@ -162,16 +199,28 @@ function Reframe() {
     setInputText("");
     setData([]);
     setSelectOption("Level 1");
+    setBiologize(false);
   };
 
   const setDesignData = () => {
     var data = "";
+
+    setBiologize(false);
     if (inputText === "") {
       handleClickOpen();
     } else if (inputText === flyingCarInp) {
       data = flyingCarData;
     } else if (inputText === antifogSpaceInp) {
       data = spaceData;
+    } else {
+      setBiologize(true);
+      if (inputText === biologizeBuildingsInp) {
+        data = biologizeBuildingsData;
+      } else if (inputText === biologizeFloodingInp) {
+        data = biologizeFloodingData;
+      } else if (inputText === biologizeToxicInp) {
+        data = biologizeToxicData;
+      }
     }
 
     setData(
@@ -256,12 +305,13 @@ function Reframe() {
         onChange={changeInputText}
         value={inputText}
       />
-
-      <Container style={{ marginTop: "20px" }}>
-        <Button variant='contained' onClick={setDesignData}>
-          Reframe
-        </Button>
-      </Container>
+      <div style={{ marginTop: "30px" }}>
+        <Container>
+          <Button variant='contained' onClick={setDesignData}>
+            Reframe
+          </Button>
+        </Container>
+      </div>
 
       <Dialog
         open={openEmptytext}
@@ -292,41 +342,44 @@ function Reframe() {
               Clear Results
             </Button>
 
-            <FormControl
-              sx={{ width: 200 }}
-              style={{ marginLeft: "20px", marginTop: "10px" }}>
-              <InputLabel
-                style={{
-                  backgroundColor: "white",
-                  paddingLeft: "4px",
-                  paddingRight: "4px",
-                  borderRadius: "5px",
-                }}
-                id='demo-multiple-name-label'>
-                Function
-              </InputLabel>
-              <Select
-                style={{
-                  height: "50px",
-                  backgroundColor: "white",
-                  marginBottom: "30px",
-                }}
-                labelId='demo-multiple-name-label'
-                id='demo-multiple-name'
-                value={selectOption}
-                onChange={handleChangeOption}
-                input={<OutlinedInput label='Name' />}
-                MenuProps={MenuProps}>
-                {selectOptions.map((option) => (
-                  <MenuItem
-                    key={option}
-                    value={option}
-                    style={getStyles(option, selectOption, theme)}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+            {!biologize && (
+              <FormControl
+                sx={{ width: 200 }}
+                style={{ marginLeft: "20px", marginTop: "10px" }}>
+                <InputLabel
+                  style={{
+                    backgroundColor: "white",
+                    paddingLeft: "4px",
+                    paddingRight: "4px",
+                    borderRadius: "5px",
+                  }}
+                  id='demo-multiple-name-label'>
+                  Function
+                </InputLabel>
+
+                <Select
+                  style={{
+                    height: "50px",
+                    backgroundColor: "white",
+                    marginBottom: "30px",
+                  }}
+                  labelId='demo-multiple-name-label'
+                  id='demo-multiple-name'
+                  value={selectOption}
+                  onChange={handleChangeOption}
+                  input={<OutlinedInput label='Name' />}
+                  MenuProps={MenuProps}>
+                  {selectOptions.map((option) => (
+                    <MenuItem
+                      key={option}
+                      value={option}
+                      style={getStyles(option, selectOption, theme)}>
+                      {option}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            )}
           </div>
         )}
         <Grid

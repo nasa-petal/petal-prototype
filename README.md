@@ -2,7 +2,7 @@
 
 The current prototype of PeTaL is a static site, with hard-coded data. Nonetheless, developing a pipeline to retrieve data from a server or database using APIs would be straightforward due to React’s component-based nature: simply call an API from the respective tab components and incorporate the retrieved data.
 
-![Screenshot](PeTaL.png)
+![Screenshot](docs/images/PeTaL.png)
 
 There are 6 tabs:
 

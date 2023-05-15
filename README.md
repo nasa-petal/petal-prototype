@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# PeTaL Prototype
+
+The current prototype of PeTaL is a static site, with hard-coded data. Nonetheless, developing a pipeline to retrieve data from a server or database using APIs would be straightforward due to React’s component-based nature: simply call an API from the respective tab components and incorporate the retrieved data.
+
+![Screenshot](PeTaL.png)
+
+There are 6 tabs:
+
+- Database Search: Exact-Match-Word Search with titles of collected biological research paper data.
+- Biomimicry Search: Retrieval of biomimetic solutions in response to biomimetic queries.
+- Clustering: Machine learning-based grouping of biological strategies extracted from research paper data.
+- Text-to-Image: Documentation and examples of prompts and outputs of text-to-image LLMs.
+- Reframe Design Challenge: Rephrase questions into a biological/biomimetic perspective.
+- About: What is PeTaL?
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
